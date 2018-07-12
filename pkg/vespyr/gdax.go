@@ -48,7 +48,7 @@ func (k *GDAXExchange) EmitsFullCandlesticks() bool {
 func (g *GDAXExchange) GetMessageChan(ctx context.Context, product Product) (<-chan *ExchangeMessage, error) {
 	var wsDialer websocket.Dialer
 
-	wsConn, _, err := wsDialer.Dial("wss://ws-feed.gdax.com", nil)
+	wsConn, _, err := wsDialer.Dial("wss://ws-feed.pro.coinbase.com", nil)
 	if err != nil {
 		return nil, errors.Wrapf(err, "error opening websocket connection to GDAX")
 	}
